@@ -17,4 +17,4 @@ def binary_find(data: list, target):
 
 if __name__ == '__main__':
     my_data = [1, 3, 4, 6, 45, 67, 78, 99]
-    print(binary_find(my_data, 99))
+    print(binary_find(my_data, 100))
