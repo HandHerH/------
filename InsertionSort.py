@@ -19,7 +19,9 @@ def direct_insertion_sort(target: list, reverse=False) -> list:
 
 def half_search(target_list: list, target) -> int:
     left, right = 0, len(target_list) - 1
-    mid = (right - left) // 2
+    if right < 0:
+        return 0
+    mid = 0
     while left <= right:
         mid = (left + right) // 2
         if target_list[mid] == target:
@@ -28,7 +30,7 @@ def half_search(target_list: list, target) -> int:
             right = mid - 1
         else:
             left = mid + 1
-    if target_list[mid] > target :
+    if target_list[mid] > target:
         return mid
     else:
         return mid + 1
